@@ -1,0 +1,336 @@
+/* MODAL STYLES */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal.active {
+    display: flex;
+  }
+  
+  .modal-content {
+    background: var(--color-white);
+    border-radius: 0.8rem;
+    padding: 2rem;
+    max-width: 500px;
+    max-height: 500px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: scaleUp 0.3s ease;
+    overflow: auto;
+  }
+  
+  .close-btn {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .close-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+  }
+  
+  .modal-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+    text-align: center;
+  }
+  
+  .modal-content button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .modal-content button:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Login Modal */
+  .modal-login {
+    background: rgba(0, 0, 0, 0.95);
+  }
+  
+  .modal-login .modal-content {
+    max-width: 400px;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid var(--color-accent);
+  }
+  
+  .modal-login .modal-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .modal-login .modal-content button {
+    background-color: var(--color-secondary);
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Register Modal */
+  .modal-register {
+    background: linear-gradient(to bottom, var(--color-bg), var(--color-white));
+  }
+  
+  .modal-register .modal-content {
+    max-width: 400px;
+    padding: 2rem;
+    border: 1px solid var(--color-secondary);
+  }
+  
+  .modal-register .modal-content h2 {
+    color: var(--color-primary);
+  }
+  
+  .modal-register .modal-content button {
+    background-color: var(--color-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Cart Modal */
+  .modal-cart {
+    background: rgba(50, 50, 50, 0.95);
+  }
+  
+  .modal-cart .modal-content {
+    max-width: 500px;
+    padding: 2rem;
+    text-align: left;
+    overflow-y: auto;
+  }
+  
+  .modal-cart .modal-content h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-cart .modal-content button {
+    background-color: var(--color-primary);
+    padding: 0.6rem 1.2rem;
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+ /* Modal de Login */
+#loginModal .modal-content {
+    max-width: 400px;
+  }
+  
+  #loginModal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #loginModal input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  #loginModal button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #loginModal button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal de Carrito */
+  #cartModal .modal-content {
+    max-width: 450px;
+  }
+  
+  #cartModal h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #cartModal #cart-items {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
+  
+  #cartModal #cart-total {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  #cartModal button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #cartModal button:hover {
+    background-color: #218838;
+  }
+  /* Modal de Registro */
+#registerModal .modal-content {
+    max-width: 450px;
+  }
+  
+  #registerModal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #registerModal .modal-body {
+    width: 100%;
+  }
+  
+  #registerModal input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  #registerModal button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #registerModal button:hover {
+    background-color: #218838;
+  }
+  
+  #registerModal .error-message,
+  #registerModal .success-message {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .success-message {
+    color: green;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Estilo para el spinner */
+  .loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-spinner div {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #007BFF;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,332 @@
+/* Header general */
+.header {
+    background: linear-gradient(90deg, var(--color-primary) 10%, var(--color-bg) 90%);
+    color: var(--color-white);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* H1 para el título */
+  .header h1 {
+    font-size: 2rem;
+    color: var(--color-white);
+  }
+  
+  /* Menú Hamburguesa */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+  }
+  
+  /* Navegación estilo hamburguesa */
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links button:hover {
+    background-color: var(--color-accent);
+  }
+  
+  .cart-counter {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.5rem 0.8rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--color-secondary);
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 0.5rem 0.5rem;
+      gap: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .cart-counter {
+      margin: 0 auto;
+    }
+  }
+  
+  /* Media Queries */
+  
+  /* Para pantallas pequeñas (≤576px) */
+  @media (max-width: 576px) {
+    .intro {
+      height: 50vh; /* Reduce la altura de la imagen */
+    }
+  
+    .intro-content {
+      font-size: 1.5rem;
+    }
+  
+    .product-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #cargarMasButton {
+      width: 100%; /* Ajusta el tamaño del botón para que ocupe todo el ancho */
+    }
+  
+    .social-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Ajustes en el header */
+    .header {
+      font-size: 18px;
+      padding: 10px;
+    }
+  
+    /* Ajustes en las tarjetas */
+    .card {
+      width: 100%; /* Ajusta las tarjetas para que se vean bien en móviles */
+      margin-bottom: 1rem;
+    }
+  
+    /* Ajusta los botones */
+    .header button {
+      font-size: 1rem; /* Reduce el tamaño de la fuente del botón */
+      padding: 0.6rem 1.5rem; /* Ajusta el padding */
+    }
+  
+    /* Ajustes en el contador del carrito */
+    .cart-counter {
+      font-size: 1rem; /* Ajusta el tamaño del contador */
+      padding: 0.5rem 1rem; /* Reduce el padding */
+    }
+  
+    /* Mostrar el menú hamburguesa */
+    .hamburger {
+      display: flex;
+    }
+  
+    /* Mostrar los enlaces cuando se activa el menú */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: var(--color-secondary);
+      border-radius: 0 0 0.8rem 0.8rem;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 1rem 0;
+    }
+  
+    /* Mostrar los enlaces cuando el menú hamburguesa es activado */
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links a, .nav-links button {
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid var(--color-primary);
+    }
+  
+    .nav-links a:last-child, .nav-links button:last-child {
+      border-bottom: none;
+    }
+  
+    nav button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  /* Para pantallas entre 577px y 768px */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .intro {
+      height: 60vh; /* Ajuste de la altura */
+    }
+  
+    .intro-content {
+      font-size: 2rem;
+    }
+  
+    .product-container {
+      justify-content: flex-start;
+    }
+  
+    #cargarMasButton {
+      width: 80%;
+    }
+  
+    /* Ajuste para el header en pantallas medianas */
+    .header {
+      font-size: 20px;
+      padding: 15px;
+    }
+  
+    .card {
+      width: calc(50% - 20px); 
+    }
+  }
+  
+  /* Para pantallas entre 769px y 992px */
+  @media (min-width: 769px) and (max-width: 992px) {
+    .intro {
+      height: 70vh;
+    }
+  
+    .intro-content {
+      font-size: 2.5rem;
+    }
+  
+    .product-container {
+      justify-content: space-evenly;
+    }
+  
+    #cargarMasButton {
+      width: 60%;
+    }
+  
+    /* Ajuste para el header en pantallas grandes */
+    .header {
+      font-size: 22px;
+      padding: 20px;
+    }
+  
+    .card {
+      width: calc(33.333% - 20px);
+    }
+  }
+  
+  /* Ajuste en pantallas grandes y más grandes */
+  @media (min-width: 993px) and (max-width: 1200px) {
+    .intro {
+      height: 80vh;
+    }
+  
+    .intro-content {
+      font-size: 3rem;
+    }
+  
+    .product-container {
+      justify-content: space-between;
+    }
+  
+    #cargarMasButton {
+      width: 50%;
+    }
+  
+    .header {
+      font-size: 24px;
+      padding: 25px;
+    }
+  
+    .card {
+      width: calc(25% - 20px);
+    }
+  }
+  
+  /* Para pantallas muy grandes */
+  @media (min-width: 1201px) and (max-width: 1400px) {
+    .intro {
+      height: 80vh;
+    }
+  
+    .intro-content {
+      font-size: 3.5rem;
+    }
+  
+    .product-container {
+      justify-content: space-between;
+    }
+  
+    #cargarMasButton {
+      width: 40%;
+    }
+  
+    .header {
+      font-size: 26px;
+      padding: 30px;
+    }
+  
+    .card {
+      width: calc(20% - 20px);
+    }
+  }
+  
+  /* Para pantallas ultra grandes */
+  @media (min-width: 1401px) {
+    .intro {
+      height: 90vh;
+    }
+  
+    .intro-content {
+      font-size: 4rem;
+    }
+  
+    .product-container {
+      justify-content: space-between;
+    }
+  
+    #cargarMasButton {
+      width: 30%;
+    }
+  
+    .header {
+      font-size: 28px;
+      padding: 35px;
+    }
+  
+    .card {
+      width: calc(16.666% - 20px);
+    }
+  }
+  

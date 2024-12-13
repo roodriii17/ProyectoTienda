@@ -1,0 +1,231 @@
+@media (max-width: 576px) {
+    /* Ajustar contenedor principal */
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  
+    /* Productos */
+    .product-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reducir el tamaño mínimo */
+      gap: 1rem; /* Reducir el espacio entre elementos */
+      padding: 0.5rem;
+    }
+  
+    .product {
+      padding: 1rem;
+    }
+  
+    .product h3 {
+      font-size: 1.2rem; /* Reducir tamaño del título */
+    }
+  
+    .product p {
+      font-size: 0.9rem; /* Reducir tamaño del texto */
+    }
+  
+    .product button {
+      font-size: 0.9rem; /* Reducir tamaño del botón */
+      padding: 0.6rem 1rem;
+    }
+  
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Botón Cargar Más */
+    #cargarMasButton {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.8rem;
+      margin-top: 1rem;
+    }
+  
+   /* Header general */
+.header {
+    background: linear-gradient(90deg, var(--color-primary) 10%, var(--color-bg) 90%);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin: 0;
+  }
+  
+  /* Menú Hamburguesa */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+  }
+  
+  /* Navegación estilo hamburguesa */
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links button:hover {
+    background-color: var(--color-accent);
+  }
+  
+  .cart-counter {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.5rem 0.7rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  /* Para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5rem; /* Reducir tamaño del título */
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--color-secondary);
+      width: 180px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      border-radius: 0 0 0.5rem 0.5rem;
+      gap: 0.5rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links button {
+      font-size: 0.8rem; /* Botones más pequeños */
+      padding: 0.4rem 0.8rem;
+      text-align: center;
+    }
+  
+    .cart-counter {
+      font-size: 0.8rem; /* Reducir tamaño del contador */
+      padding: 0.4rem 0.6rem;
+    }
+  }
+  
+    /* Carrusel de Categorías */
+    .categorias-carousel {
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .category-card {
+      flex: 0 0 150px;
+      padding: 1rem;
+    }
+  
+    .category-card h3 {
+      font-size: 1rem;
+    }
+  
+    .category-card p {
+      font-size: 0.8rem;
+    }
+  
+    .category-card img {
+      max-height: 80px; /* Reducir el tamaño de las imágenes */
+    }
+  
+    /* Texto */
+    .text-container h1 {
+      font-size: 1.5rem; /* Reducir tamaño del título */
+      text-align: center;
+    }
+  
+    .text-container p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  
+    .social-links {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  
+    .social-links a {
+      font-size: 1.5rem;
+    }
+  
+    /* Footer */
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .footer-section {
+      margin-bottom: 1rem;
+    }
+  
+    .footer-social a {
+      font-size: 1.5rem;
+      margin: 0.5rem;
+    }
+  
+    /* Modales */
+    .modal-content {
+      max-width: 90%; /* Asegura que los modales se ajusten al ancho */
+      padding: 1rem;
+    }
+  
+    .modal-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .modal-content button {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  
+    /* Spinner */
+    .loading-spinner div {
+      width: 30px;
+      height: 30px;
+      border-width: 3px;
+    }
+  }
+  
